@@ -1,0 +1,150 @@
+0100:    8F838405       pop     word ptr [bp+di+0584h]
+0104:    8145515451     add     word ptr [di+51h], 5154h
+0109:    80A8F60082     sub     byte ptr [bx+si+00F6h], 82h
+010E:    813E5A569FF8   cmp     word ptr [565Ah], 0F89Fh
+0114:    81C61402       add     si, 0214h
+0118:    83C624         add     si, 0024h
+011B:    0402           add     al, 02h
+011D:    81C69F00       add     si, 009Fh
+0121:    81EE1402       sub     si, 0214h
+0125:    83EE24         sub     si, 0024h
+0128:    2C02           sub     al, 02h
+012A:    81EE9F00       sub     si, 009Fh
+012E:    81FE14F2       cmp     si, 0F214h
+0132:    83FE24         cmp     si, 0024h
+0135:    3C02           cmp     al, 02h
+0137:    81FE9F00       cmp     si, 009Fh
+013B:    C7041402       mov     word ptr [si], 0214h
+013F:    C7042400       mov     word ptr [si], 0024h
+0143:    C60402         mov     byte ptr [si], 02h
+0146:    C7049F00       mov     word ptr [si], 009Fh
+014A:    FF00           inc     word ptr [bx+si]
+014C:    FE8E5402       dec     byte ptr [bp+0254h]
+0150:    F6E0           mul     al
+0152:    F7E7           mul     di
+0154:    F7B2F400       div     word ptr [bp+si+00F4h]
+0158:    FF11           call    word ptr [bx+di]
+015A:    36FF5754       call    word ptr ss:[bx+54h]
+015E:    FFA2540F       jmp     word ptr [bp+si+0F54h]
+0162:    26FF25         jmp     word ptr es:[di]
+0165:    FF34           push    word ptr [si]
+0167:    A14205         mov     ax, [0542h]
+016A:    A065F9         mov     al, [0F965h]
+016D:    A34598         mov     [9845h], ax
+0170:    A298EF         mov     [0EF98h], al
+0173:    9A54F898EF     call    0EF98h:0F854h
+0178:    EAE4F8784F     jmp     4F78h:0F8E4h
+017D:    7761           ja      01E0
+017F:    E2CF           loop    0150
+0181:    E89841         call    431C
+0184:    E9FF98         jmp     9A86
+0187:    CD05           int     05h
+0189:    CD10           int     10h
+018B:    CD21           int     21h
+018D:    C3             ret     
+018E:    C24500         ret     0045h
+0191:    C265F4         ret     0F465h
+0194:    056400         add     ax, 0064h
+0197:    80EBCF         sub     bl, 0CFh
+019A:    B689           mov     dh, 89h
+019C:    B974F8         mov     cx, 0F874h
+019F:    0200           add     al, [bx+si]
+01A1:    3B9A4105       cmp     bx, [bp+si+0541h]
+01A5:    8ED8           mov     ds, ax
+01A7:    8E01           mov     es, [bx+di]
+01A9:    8C15           mov     [di], ss
+01AB:    02C3           add     al, bl
+01AD:    091F           or      [bx], bx
+01AF:    135452         adc     dx, [si+52h]
+01B2:    1A1B           sbb     bl, [bp+di]
+01B4:    2BC3           sub     ax, bx
+01B6:    221EFF00       and     bl, [00FFh]
+01BA:    30B08754       xor     [bx+si+5487h], dh
+01BE:    0D8754         or      ax, 5487h
+01C1:    14B5           adc     al, 0B5h
+01C3:    1DFFFF         sbb     ax, 0FFFFh
+01C6:    2405           and     al, 05h
+01C8:    355400         xor     ax, 0054h
+01CB:    A97408         test    ax, 0874h
+01CE:    CA8754         retf    5487h
+01D1:    27             daa     
+01D2:    2F             das     
+01D3:    37             aaa     
+01D4:    3F             aas     
+01D5:    90             nop     
+01D6:    98             cbw     
+01D7:    99             cwd     
+01D8:    9B             wait    
+01D9:    9C             pushf   
+01DA:    9D             popf    
+01DB:    9E             sahf    
+01DC:    9F             lahf    
+01DD:    A4             movsb
+01DE:    A5             movsw
+01DF:    A6             cmpsb
+01E0:    A7             cmpsw
+01E1:    AA             stosb
+01E2:    AB             stosw
+01E3:    AC             lodsb
+01E4:    AD             lodsw
+01E5:    AE             scasb
+01E6:    AF             scasw
+01E7:    CB             retf    
+01E8:    CC             int 3   
+01E9:    CE             into    
+01EA:    CF             iret    
+01EB:    D7             xlat    
+01EC:    F0             lock    
+01ED:    F2             repnz   
+01EE:    F3             rep     
+01EF:    F4             hlt     
+01F0:    F5             cmc     
+01F1:    C3             ret     
+01F2:    F8             clc     
+01F3:    F9             stc     
+01F4:    FA             cli     
+01F5:    FB             sti     
+01F6:    FC             cld     
+01F7:    FD             std     
+01F8:    36011C         add     ss:[si], bx
+01FB:    268AA984F4     mov     ch, es:[bx+di+0F484h]
+0200:    80CD54         or      ch, 54h
+0203:    81D38275       adc     bx, 7582h
+0207:    835E4F22       sbb     word ptr [bp+4Fh], 0022h
+020B:    2E8125BB00     and     word ptr cs:[di], 00BBh
+0210:    803094         xor     byte ptr [bx+si], 94h
+0213:    E0F8           loopne  020D
+0215:    E1F7           loope   020E
+0217:    36F715         not     word ptr ss:[di]
+021A:    F7D8           neg     ax
+021C:    F62EFF00       imul    byte ptr [00FFh]
+0220:    F6F9           idiv    cl
+0222:    3E854600       test    ds:[bp+00h], ax
+0226:    86DE           xchg    bl, dh
+0228:    8D5854         lea     bx, [bx+si+54h]
+022B:    C40E4105       les     cx, [0541h]
+022F:    C501           lds     ax, [bx+di]
+0231:    D1C0           rol     ax, 1
+0233:    D3C0           rol     ax, cl
+0235:    2ED00A         ror     byte ptr cs:[bp+si], 1
+0238:    D2DA           rcr     dl, cl
+023A:    D127           shl     word ptr [bx], 1
+023C:    D32C           shr     word ptr [si], cl
+023E:    D0A75402       shl     byte ptr [bx+0254h], 1
+0242:    D0A75402       shl     byte ptr [bx+0254h], 1
+0246:    D3F9           sar     cx, cl
+0248:    D1D3           rcl     bx, 1
+024A:    D1D3           rcl     bx, 1
+024C:    90             nop     
+024D:    92             xchg    ax, dx
+024E:    96             xchg    ax, si
+024F:    2EF742549800   test    word ptr cs:[bp+si+54h], 0098h
+0255:    2E830198       add     word ptr cs:[bx+di], 0FF98h
+0259:    3681BF05010408 cmp     word ptr ss:[bx+0105h], 0804h
+0260:    CD48           int     48h
+0262:    E448           in      al, 48h
+0264:    E5F7           in      ax, 0F7h
+0266:    E664           out     64h, al
+0268:    E788           out     88h, ax
+026A:    D40A           aam     
+026C:    D50A           aad     
